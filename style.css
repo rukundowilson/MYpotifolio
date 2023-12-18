@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/* -------------------navbar--------------- */
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 35px;
+    background-color: #000;
+    height: 80px;
+    width: 100%;
+    box-shadow: inset 3px 12px 20px blue;
+}
+.logo{
+    color: #f2f2f2;
+    font-size: 30px;
+}
+.bars{
+    display: none;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: #ffffff;
+    font-size: 20px;
+    
+    margin: 0;
+    display: block;
+}
+nav ul li a:hover{
+    padding: 5px 10px;
+    background: green;
+    border-radius: 50px;
+}
+nav ul li a.active{
+    color: black;
+    padding: 7px 12px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+nav ul li a.active:hover{
+    padding: 5px 10px;
+    background: green;
+    border-radius: 50px;
+}
+@media only screen and (max-width: 1320px){
+    .navbar{
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .navbar{
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .bars{
+        display: block;
+        cursor: pointer;
+    }
+    .bars .line{
+        width: 30px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 6px 0;
+    }
+    .nav-links{
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        width: 200px;
+        right: 0;
+        background-color: darkblue;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav-links ul{
+        text-align: center;
+        padding: 20px;
+        display: block;
+        margin: 0;
+        opacity: 1;
+    }
+    .nav-links.active{
+        background: blue;
+        height: 450px;
+    }
+
+}
+.main{
+    position: absolute;
+    top: 80px;
+}
